@@ -44,28 +44,28 @@ const PROJECTS = [
   {
     id: 1,
     name: 'CHO小站',
-    desc: '这个博客网站本身，用 React 搭建，承载我所有的散步、手作与读书记录。',
+    desc: '这个博客网站本身，用 React 搭建，以后在这发癫。',
     link: '#',
     Icon: IconScreen,
   },
   {
     id: 2,
-    name: '手作陶器图鉴',
-    desc: '记录我做过的每一件陶器，从歪歪扭扭的杯子，到勉强成型的碗。',
+    name: '占位符',
+    desc: '占位符',
     link: '#',
     Icon: IconCup,
   },
   {
     id: 3,
-    name: '山野散步地图',
-    desc: '收集我走过的散步路线，标注沿途的茶屋、野栗子树和好看的落叶。',
+    name: '占位符',
+    desc: '占位符',
     link: '#',
     Icon: IconMountain,
   },
   {
     id: 4,
-    name: '旧书交换角',
-    desc: '把读过的书放进来，和同好交换，让旧书去遇见新的读者。',
+    name: '占位符',
+    desc: '占位符',
     link: '#',
     Icon: IconBook,
   },
@@ -85,7 +85,7 @@ export default function ProjectPage() {
               <h3 className="project__name">{name}</h3>
               <p className="project__desc">{desc}</p>
               <p className="project__link">
-                <a href={link}>查看详情 →</a>
+                <a href={link}>链接一个都没有，点了也没用 →</a>
               </p>
             </div>
           </section>

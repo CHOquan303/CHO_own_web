@@ -27,7 +27,7 @@ export default function MailPage() {
             className="mail__input"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="你的名字"
+            placeholder="你地鸣至"
             required
           />
         </div>
