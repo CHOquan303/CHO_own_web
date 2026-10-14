@@ -1,0 +1,150 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: var(--green);
+  border-bottom: 2px solid #3f6b3e;
+  box-shadow: 0 2px 6px rgba(45, 74, 45, 0.25);
+}
+
+.navbar__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 8px var(--pad-md);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ---------- Logo（粗体衬线 + 做旧印章） ---------- */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo__text {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  /* 做旧 / 印章压印感 */
+  text-shadow: 1px 1px 0 #3f6b3e, 2px 2px 0 rgba(45, 74, 45, 0.35);
+}
+
+.logo__seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+  color: #fff;
+  background-color: #c0453a; /* 朱红印章点缀 */
+  border-radius: 3px;
+  transform: rotate(-8deg);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5);
+  font-family: var(--serif);
+}
+
+/* ---------- 导航按钮组 ---------- */
+.nav {
+  display: flex;
+  align-items: stretch;
+  margin-left: auto;
+}
+
+.nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 6px 16px;
+  text-decoration: none;
+  color: var(--white);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  border-left: 1px dotted rgba(255, 255, 255, 0.55);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.nav__item:hover {
+  background-color: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+.nav__item--active {
+  background-color: var(--panel);
+  color: var(--green-deep);
+}
+
+.nav__item--active:hover {
+  background-color: var(--panel);
+  color: var(--green-deep);
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.nav__label {
+  line-height: 1;
+}
+
+/* ---------- 访问计数器（复古数码管） ---------- */
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  margin-left: 4px;
+}
+
+.counter__label {
+  color: var(--white);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.counter__digits {
+  display: flex;
+  gap: 2px;
+}
+
+.counter__digit {
+  min-width: 15px;
+  padding: 2px 3px;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: bold;
+  color: #d9f0c8;
+  background-color: #2f522f;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 760px) {
+  .navbar__inner {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0;
+  }
+  .nav__item {
+    flex: 1;
+    padding: 6px 4px;
+    border-left: none;
+  }
+}

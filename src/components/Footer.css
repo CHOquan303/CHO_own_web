@@ -1,0 +1,25 @@
+.footer {
+  background-color: var(--green);
+  border-top: 2px solid #3f6b3e;
+  margin-top: var(--pad-lg);
+}
+
+.footer__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 16px var(--pad-md);
+  text-align: center;
+}
+
+.footer__text {
+  color: var(--white);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.footer__sub {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}

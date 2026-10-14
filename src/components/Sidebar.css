@@ -1,0 +1,47 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-lg);
+}
+
+.sidebar__block {
+  background-color: var(--panel);
+  border: 1px solid var(--line);
+}
+
+.sidebar__list {
+  list-style: none;
+  padding: var(--pad-sm) var(--pad-md) var(--pad-md);
+}
+
+.sidebar__item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 5px 0;
+  border-bottom: 1px dotted var(--line);
+}
+
+.sidebar__item:last-child {
+  border-bottom: none;
+}
+
+/* 索引链接：无下划线，悬停变色 */
+.sidebar__link {
+  text-decoration: none;
+  color: var(--green-deep);
+  font-size: 13px;
+}
+
+.sidebar__link:hover {
+  color: var(--green-dark);
+  background-color: rgba(91, 140, 90, 0.1);
+}
+
+.sidebar__date {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: #8aa384;
+  white-space: nowrap;
+}

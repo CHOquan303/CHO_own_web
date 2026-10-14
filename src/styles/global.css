@@ -1,0 +1,118 @@
+/* ============================================================
+   CHO小站 · 全站设计变量与基础样式
+   日式复古手作感 · 清新绿色系
+   ============================================================ */
+
+:root {
+  /* 主色调 */
+  --green: #5b8c5a;          /* 森林绿：导航栏 / 标题条 / 底部 / 链接 */
+  --green-dark: #3f7a3f;     /* 悬停加深 */
+  --green-deep: #2d4a2d;     /* 深墨绿：正文文字 */
+  --bg: #eef5e8;             /* 浅薄荷绿：页面背景 */
+  --panel: #f5faf0;          /* 极淡薄荷白：内容区底色 */
+  --line: #b9cfae;           /* 虚线 / 分隔线颜色 */
+  --white: #ffffff;
+
+  /* 字体 */
+  --serif: 'Georgia', 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+  --sans: 'Verdana', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --mono: 'Courier New', 'Consolas', monospace;
+
+  /* 间距 */
+  --pad-lg: 28px;
+  --pad-md: 20px;
+  --pad-sm: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  /* 浅薄荷绿底 + 细微纸张噪点纹理（非纯色） */
+  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+  color: var(--green-deep);
+  font-family: var(--sans);
+  line-height: 1.75;
+  padding-top: 74px; /* 给固定导航栏让位 */
+}
+
+a {
+  color: var(--green);
+  text-decoration: underline;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+a:hover {
+  color: var(--green-dark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- 通用标题条（森林绿矩形 + 白字居中） ---------- */
+.title-bar {
+  background-color: var(--green);
+  color: var(--white);
+  text-align: center;
+  font-family: var(--serif);
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  padding: 10px 16px;
+}
+
+.title-bar--small {
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  padding: 8px 12px;
+}
+
+/* ---------- 虚线分隔（手账感） ---------- */
+.dotted-sep {
+  border: none;
+  border-top: 2px dotted var(--line);
+  margin: var(--pad-lg) 0;
+}
+
+/* ---------- 内容面板：极淡薄荷白底 + 呼吸感内边距 ---------- */
+.panel {
+  background-color: var(--panel);
+  padding: var(--pad-lg);
+  box-shadow: 0 1px 3px rgba(45, 74, 45, 0.08);
+}
+
+/* ---------- 页面主体容器（居中，两侧留白） ---------- */
+.page-wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: var(--pad-lg) var(--pad-md);
+}
+
+/* ---------- 通用正文链接 ---------- */
+.prose a {
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose a:hover {
+  color: var(--green-dark);
+}
+
+.prose p {
+  margin-bottom: 1em;
+}
+
+/* ---------- 占位页面（后续 About / Project / Mail / Thanks 复用） ---------- */
+.placeholder {
+  min-height: 60vh;
+}

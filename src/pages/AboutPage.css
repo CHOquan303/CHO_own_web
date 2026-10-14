@@ -1,0 +1,42 @@
+/* 单栏居中，内容区宽度受限（约 800px） */
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about__body {
+  border: 1px solid var(--line);
+  border-top: none;
+}
+
+.about__lead {
+  font-size: 15px;
+}
+
+.about__sep {
+  margin: var(--pad-md) 0;
+}
+
+.about__subtitle {
+  margin-bottom: var(--pad-sm);
+}
+
+.about__list {
+  list-style: none;
+  padding: 0;
+}
+
+.about__list li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 6px;
+}
+
+.about__list li::before {
+  content: '✿';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--green);
+  font-size: 12px;
+}

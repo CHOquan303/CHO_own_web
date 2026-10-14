@@ -1,0 +1,66 @@
+/* 单栏居中，内容区宽度受限 */
+.project {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-md);
+}
+
+/* 项目卡片：淡薄荷白底 + 虚线边框 */
+.project__item {
+  display: flex;
+  gap: var(--pad-md);
+  background-color: var(--panel);
+  border: 2px dashed var(--line);
+  padding: var(--pad-md);
+}
+
+.project__fig {
+  flex-shrink: 0;
+  width: 96px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #edf4e6;
+  color: var(--green);
+}
+
+.project-icon {
+  width: 44px;
+  height: 44px;
+}
+
+.project__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.project__name {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--green-deep);
+  margin-bottom: 6px;
+}
+
+.project__desc {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.project__link {
+  font-size: 13px;
+}
+
+@media (max-width: 560px) {
+  .project__item {
+    flex-direction: column;
+  }
+  .project__fig {
+    width: 100%;
+  }
+}

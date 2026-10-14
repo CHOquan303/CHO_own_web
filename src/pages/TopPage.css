@@ -1,0 +1,28 @@
+/* 双栏布局：左侧主内容约 70%，右侧侧边栏约 30% */
+.top-layout {
+  display: flex;
+  gap: var(--pad-lg);
+  align-items: flex-start;
+}
+
+.top-main {
+  flex: 7; /* ≈ 70% */
+  min-width: 0;
+}
+
+.top-layout > aside {
+  flex: 3; /* ≈ 30% */
+  min-width: 0;
+  position: sticky;
+  top: 90px;
+}
+
+@media (max-width: 860px) {
+  .top-layout {
+    flex-direction: column;
+  }
+  .top-layout > aside {
+    position: static;
+    width: 100%;
+  }
+}

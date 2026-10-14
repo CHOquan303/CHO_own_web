@@ -1,0 +1,36 @@
+/* 单栏居中，内容区宽度受限 */
+.thanks {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.thanks__body {
+  border: 1px solid var(--line);
+  border-top: none;
+  text-align: center;
+}
+
+.thanks-illustration {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto var(--pad-sm);
+}
+
+.thanks__msg {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--green-deep);
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.thanks__sub {
+  color: #6f8a6a;
+  font-size: 14px;
+}
+
+.thanks__back {
+  margin-top: var(--pad-md);
+  font-size: 15px;
+}
