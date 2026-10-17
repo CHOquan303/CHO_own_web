@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './NavBar.css'
 
@@ -54,31 +53,9 @@ const NAV_ITEMS = [
   { key: 'thanks', label: 'Thanks', path: '/thanks', Icon: IconHeart },
 ]
 
-/* 访问计数器：每次进入 +1，存 localStorage；模块级标记防止 StrictMode 重复计数 */
-let counted = false
-
-function useVisitCount() {
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    if (counted) return
-    counted = true
-    const KEY = 'cho_visit_count'
-    let n = parseInt(localStorage.getItem(KEY) || '', 10)
-    if (!Number.isFinite(n) || n <= 0) {
-      n = 1000 + Math.floor(Math.random() * 5000)
-    }
-    n += 1
-    localStorage.setItem(KEY, String(n))
-    setCount(n)
-  }, [])
-
-  return String(count).padStart(6, '0')
-}
-
 export default function NavBar() {
   const { pathname } = useLocation()
-  const count = useVisitCount()
+  const count = '000000' // 访问计数：0 占位，待接第三方统计
 
   const isActive = (item) =>
     item.key === 'top' ? pathname === '/' || pathname === '/top' : pathname === item.path

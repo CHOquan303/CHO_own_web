@@ -112,6 +112,91 @@ img {
   margin-bottom: 1em;
 }
 
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: var(--green-deep);
+  font-family: var(--serif);
+  margin: 1.2em 0 0.6em;
+}
+
+.prose h3 {
+  font-size: 16px;
+  border-left: 4px solid var(--green);
+  padding-left: 8px;
+}
+
+.prose ul,
+.prose ol {
+  margin: 0 0 1em 1.4em;
+}
+
+.prose li {
+  margin-bottom: 4px;
+}
+
+.prose blockquote {
+  margin: 0 0 1em;
+  padding: 8px 14px;
+  border-left: 3px solid var(--green);
+  background-color: rgba(91, 140, 90, 0.07);
+  color: #5a7355;
+}
+
+.prose code {
+  font-family: var(--mono);
+  font-size: 0.9em;
+  background-color: rgba(91, 140, 90, 0.12);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.prose pre {
+  background-color: #2d4a2d;
+  color: #e8f3e0;
+  padding: 14px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+
+.prose pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.prose img {
+  max-width: 100%;
+  margin: 1em auto;
+  border: 2px dashed var(--line);
+}
+
+.prose hr {
+  border: none;
+  border-top: 2px dotted var(--line);
+  margin: var(--pad-md) 0;
+}
+
+.prose table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.prose th {
+  background-color: var(--green);
+  color: var(--white);
+}
+
 /* ---------- 占位页面（后续 About / Project / Mail / Thanks 复用） ---------- */
 .placeholder {
   min-height: 60vh;
