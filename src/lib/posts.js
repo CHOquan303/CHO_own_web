@@ -1,4 +1,4 @@
-import matter from 'gray-matter'
+import yaml from 'js-yaml'
 
 /** 把 frontmatter 的 date 规范化成 'YYYY-MM-DD' 字符串（js-yaml 可能把它解析成 Date 对象） */
 function toDateString(value) {
@@ -11,6 +11,14 @@ function toDateString(value) {
     return `${y}-${m}-${d}`
   }
   return String(value)
+}
+
+/** 解析 markdown 顶部的 YAML frontmatter（--- 包裹），返回 { data, content } */
+function parseFrontmatter(raw) {
+  const m = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/.exec(raw)
+  if (!m) return { data: {}, content: raw }
+  const data = yaml.load(m[1]) || {}
+  return { data, content: m[2] }
 }
 
 /**
@@ -29,7 +37,7 @@ export async function loadPosts() {
         const r = await fetch(`${import.meta.env.BASE_URL}content/${file}`)
         if (!r.ok) throw new Error(`文章加载失败：${file}`)
         const raw = await r.text()
-        const { data, content } = matter(raw)
+        const { data, content } = parseFrontmatter(raw)
         return {
           id: file.replace(/\.md$/, ''),
           title: data.title || file.replace(/\.md$/, ''),
