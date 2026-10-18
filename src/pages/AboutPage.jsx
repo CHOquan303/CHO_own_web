@@ -43,7 +43,7 @@ export default function AboutPage() {
         <hr className="dotted-sep about__sep" />
 
         <p>
-          如果你有什么想说的，到 <a href="/mail">Mail 页</a>给我写信吧。（页面没做完，写了我也看不见，
+          如果你有什么想说的，到 <></><a href="">*/Mail 页</a>给我写信吧。（页面没做完，写了我也看不见，
           quancho1995@163.com这是我的163邮箱真想发发这吧，当然QQ，微信联系也可）
           
         </p>
