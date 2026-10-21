@@ -1,5 +1,5 @@
 ---
-title: 我说agent开发路线有没有懂得
+title: 首次 Vibe Coding 复盘
 date: "2026-10-21"
 ---
 # 首次 Vibe Coding 复盘（先规划再动手）
